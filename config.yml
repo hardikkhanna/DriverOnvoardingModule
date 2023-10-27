@@ -1,0 +1,38 @@
+---
+template: Hello, %s!
+defaultName: Stranger
+database:
+  driverClass: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/onboarding?autoReconnect=true
+  user: root
+  password:
+  validationQuery: "SELECT 1"
+  minSize: 8
+  maxSize: 32
+  properties:
+    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate.hbm2ddl.auto: update
+    hibernate.show_sql: true
+    hibernate.format_sql: true
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: /var/log/myapp/myapp.log
+      archivedLogFilenamePattern: /var/log/myapp/myapp-%d.log.gz
+      archivedFileCount: 30
+      timeZone: Asia/Kolkata
+
+  loggers:
+    "org.hibernate.SQL":
+      level: DEBUG
+    appenders:
+      - type: console
+        threshold: ALL
+        target: stdout
+      - type: file
+        currentLogFilename: /var/log/myapp/hibernate.log
+        archivedLogFilenamePattern: /var/log/myapp/hibernate-%d.log.gz
+        archivedFileCount: 30
+        timeZone: Asia/Kolkata
