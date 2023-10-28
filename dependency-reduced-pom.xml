@@ -21,7 +21,7 @@
                 <transformers>
                   <transformer />
                   <transformer>
-                    <mainClass>service.BaseApplication</mainClass>
+                    <mainClass>com.module.BaseApplication</mainClass>
                   </transformer>
                 </transformers>
               </configuration>
@@ -200,7 +200,7 @@
   </dependencyManagement>
   <properties>
     <dropwizard.version>1.3.21</dropwizard.version>
-    <mainClass>service.BaseApplication</mainClass>
+    <mainClass>com.module.BaseApplication</mainClass>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <lombok.version>1.18.22</lombok.version>

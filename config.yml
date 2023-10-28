@@ -18,21 +18,26 @@ database:
 logging:
   level: INFO
   appenders:
+    - type: console
+      target: stdout
+      timeZone: Asia/Kolkata
+
     - type: file
       currentLogFilename: /var/log/myapp/myapp.log
       archivedLogFilenamePattern: /var/log/myapp/myapp-%d.log.gz
       archivedFileCount: 30
       timeZone: Asia/Kolkata
-
   loggers:
-    "org.hibernate.SQL":
+    "org.hibernate":
       level: DEBUG
-    appenders:
-      - type: console
-        threshold: ALL
-        target: stdout
-      - type: file
-        currentLogFilename: /var/log/myapp/hibernate.log
-        archivedLogFilenamePattern: /var/log/myapp/hibernate-%d.log.gz
-        archivedFileCount: 30
-        timeZone: Asia/Kolkata
+      additive: false
+      appenders:
+        - type: console
+          threshold: ALL
+          target: stdout
+          timeZone: Asia/Kolkata
+        - type: file
+          currentLogFilename: /var/log/myapp/hibernate.log
+          archivedLogFilenamePattern: /var/log/myapp/hibernate-%d.log.gz
+          archivedFileCount: 30
+          timeZone: Asia/Kolkata

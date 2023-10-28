@@ -10,8 +10,5 @@
         <module name="driver-onboarding" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="driver-onboarding" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
