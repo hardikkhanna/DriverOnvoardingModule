@@ -10,6 +10,6 @@ How to start the driver-onboarding application
 Presentation
 ---
 [
-PPT `http://localhost:8081/healthcheck`
+PPT
 ](https://docs.google.com/presentation/d/1VLL7pc4R2pSERKKmEQHLUsyqbnPOTuW1wVH1N9njWP4/edit?usp=sharing)
 
